@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ECF_LEGUMOS_CARRIVALE.Models.Vegetable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="titretr">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="titretr">
+                @Html.DisplayNameFor(model => model.Variety)
+            </th>
+            <th class="titretr">
+                @Html.DisplayNameFor(model => model.PrimaryColor)
+            </th>
+            <th class="titretr">
+                @Html.DisplayNameFor(model => model.LifeTime)
+            </th>
+            <th class="titretr">
+                @Html.DisplayNameFor(model => model.Fresh)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Variety)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LifeTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fresh)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VegetableId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VegetableId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VegetableId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+﻿body {
+}
+
+
+
+
+#menunav {
+    display: flex; 
+    justify-content: space-between;
+    background-color: rgb(13, 138, 90);
+    color: white;
+    width: 100%;
+}
+
+ul {
+    display: flex; /* Transformation en flexbox */
+    
+    padding-right: 15%;
+    padding-left: 15%;
+    align-content:center;
+    width:50%;
+}
+
+li {
+    list-style: none;
+    width: 25%;
+}
+
+a {
+    padding-right: 5%;
+    padding-left: 5%;
+    color: white;
+    width: 100%;
+}
+.titretr {
+    background-color: rgb(13, 138, 90);
+    color: yellow;
+}

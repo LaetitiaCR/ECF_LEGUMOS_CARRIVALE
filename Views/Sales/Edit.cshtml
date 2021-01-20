@@ -1,0 +1,54 @@
+﻿@model ECF_LEGUMOS_CARRIVALE.Models.Sale
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Sale</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SaleId" />
+            <div class="form-group">
+                <label asp-for="SaleDate" class="control-label"></label>
+                <input asp-for="SaleDate" class="form-control" />
+                <span asp-validation-for="SaleDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaleWeight" class="control-label"></label>
+                <input asp-for="SaleWeight" class="form-control" />
+                <span asp-validation-for="SaleWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaleUnitPrice" class="control-label"></label>
+                <input asp-for="SaleUnitPrice" class="form-control" />
+                <span asp-validation-for="SaleUnitPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaleActive" class="control-label"></label>
+                <input asp-for="SaleActive" class="form-control" />
+                <span asp-validation-for="SaleActive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VegetableId" class="control-label"></label>
+                <input asp-for="VegetableId" class="form-control" />
+                <span asp-validation-for="VegetableId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

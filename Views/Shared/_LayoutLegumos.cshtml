@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/main.css" />
+    <script src="~/js/main.js" defer></script>
+</head>
+<body>
+    @RenderSection("Scripts", required: false)
+    <header>
+        <h1>@ViewBag.Title</h1>
+        
+        <nav class="navbar" id="menunav">
+            
+               
+
+                    <ul id="menuvente" class="navigation">
+                        <li><a href="/Sales">VENTES</a></li>
+                        <li><a href="/Sales/Create">NOUVELLE VENTE</a></li>
+
+                    </ul>
+              
+
+                    <ul id="menuvegetale"class="navigation">
+                        <li><a href="/Vegetables">LEGUMES</a></li>
+                        <li><a href="/Vegetables/Create">NOUVEAU LEGUME</a></li>
+
+
+                    </ul>
+
+                
+           
+        </nav>
+    </header>
+
+    <main>
+        <img src="~/img/legumos.jpg" asp-append-version="true"/>
+      
+        <h1>Liste des ventes</h1>
+        <div class="container body-content">
+            @RenderBody()
+
+
+
+        </div>
+
+
+        <hr />
+
+    </main>
+
+
+
+    <footer>
+    </footer>
+
+</body>
+</html>
+
